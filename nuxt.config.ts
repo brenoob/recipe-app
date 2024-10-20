@@ -18,6 +18,17 @@ export default defineNuxtConfig({
       }
     }
   },
+  // vite: {
+  //   server: {
+  //     hmr: {
+  //       overlay: false
+  //     }
+  //   }
+  // },
+
+  image: {
+    domains: ['https://cdn.dummyjson.com']
+  },
 
   unhead: {
     renderSSRHeadOptions: {
@@ -31,6 +42,10 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxt/icon',
     '@nuxt/image'
+  ],
+
+  css: [
+    '@/assets/css/global.css' // Use @ para referenciar a raiz do projeto
   ],
 
   googleFonts: {
