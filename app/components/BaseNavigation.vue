@@ -33,11 +33,12 @@ const closeMenu = () => {
           ]"
         >
           <li>
-            <NuxtLink to="/" class="hover:text-gray-600 transition-colors" @click="isMenuOpen = false">Home</NuxtLink>
+            <NuxtLink to="/" @click="isMenuOpen = false">Home</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/about" class="hover:text-gray-600 transition-colors" @click="isMenuOpen = false">About</NuxtLink>
+            <NuxtLink to="/about" @click="isMenuOpen = false">About</NuxtLink>
           </li>
+          <ColorMode class="ml-auto mr-4 sm:ml-0 sm:mr-0" />
         </ul>
       </nav>
     </header>

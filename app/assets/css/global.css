@@ -4,9 +4,50 @@
 
 @layer base {
     body {
-        @apply bg-slate-200;
+        @apply bg-slate-200 text-slate-800 transition-colors duration-200;
     }
     main {
         @apply mt-20 min-h-screen;
     }
+    header {
+        @apply text-gray-600
+    }
+    nav li a {
+        @apply text-gray-600 hover:text-dodgeroll-gold/90 transition-colors duration-200
+    }
 }
+@layer components {
+    .animate-transition {
+        animation: transition 1s ease-in-out;
+    }
+
+    .animate-spin-slow {
+        animation: spin-slow 3s linear infinite;
+    }
+
+    @keyframes spin-slow {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes transition {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+@layer utilities {
+    .dark-mode body {
+        @apply bg-slate-800 text-white;
+    }
+}
+
