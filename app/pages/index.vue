@@ -5,7 +5,6 @@
 <template>
   <main>
     <section>
-      <!-- flex flex-col items-center justify-center max-w-xl w-full p-6 bg-white rounded-lg shadow-md -->
       <div
         class="container flex flex-col lg:flex-row items-center py-20 gap-10"
       >
@@ -38,20 +37,5 @@
       <p class="text-lg lg:text-xl mb-8">Check out our most popular recipes!</p>
       <RecipeCard />
     </section>
-    <!-- <section>
-      <h2 class="text-3xl">Discover, Create, Share</h2>
-      <p class="">check out our most popular recipes</p>
-      <div class="grid" v-if="!error">
-        <div class="flex" v-for="recipe in data?.recipes">
-          <NuxtImg
-            :src="recipe.image"
-            sizes="xs:100vw sm:50vw lg:400px"
-            densities="x1"
-            format="webp"
-            :alt="recipe.name"
-          />
-        </div>
-      </div>
-    </section> -->
   </main>
 </template>

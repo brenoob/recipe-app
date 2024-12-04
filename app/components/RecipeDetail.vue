@@ -4,7 +4,7 @@ import type { Recipe } from '~/types/recipeTypes';
 const route = useRoute();
 const id = route.params.id as string;
 
-const { data: recipe, error, refresh } = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id}`);
+const { data: recipe, error } = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id}`);
 
 const isLoading = ref(true);
 

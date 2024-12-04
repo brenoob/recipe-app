@@ -12,8 +12,8 @@ const closeMenu = () => {
       <nav class="container mx-auto px-4 flex items-center justify-between">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-1">
-          <NuxtImg width="56" densities="1x" src="/icon-green.png" alt="logo" format="webp" />
-          <span class="text-2xl sm:text-3xl font-bold">Nuxt recipes</span>
+          <NuxtImg class="rounded-full" width="56" densities="1x" src="/favicon.svg" alt="logo" format="svg" />
+          <span class="text-2xl sm:text-3xl font-bold">recipes</span>
         </NuxtLink>
 
         <!-- Botão hamburguer -->
