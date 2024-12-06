@@ -7,9 +7,13 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix .",
+    "postinstall": "nuxt prepare",
+    "prepare": "husky"
   },
   "dependencies": {
+    "@nuxt/eslint": "^0.7.2",
     "@nuxt/icon": "^1.5.6",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/google-fonts": "^3.2.0",
@@ -20,6 +24,15 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^3.5.2"
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@nuxt/eslint-config": "^0.7.2",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "eslint": "^9.16.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint --fix"
   }
 }
