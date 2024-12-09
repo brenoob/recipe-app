@@ -74,7 +74,7 @@ if (error.value) {
           <ul class="space-y-2">
             <li v-for="ingredient in recipe.ingredients" :key="ingredient" class="flex items-center">
               <label class="flex items-center space-x-3 cursor-pointer">
-                <input type="checkbox" class="form-checkbox h-4 w-4 text-dodgeroll-gold rounded focus:ring-dodgeroll-gold" />
+                <input type="checkbox" class="form-checkbox h-4 w-4 text-dodgeroll-gold rounded focus:ring-dodgeroll-gold" >
                 <span class="text-sm sm:text-base text-gray-700">{{ ingredient }}</span>
               </label>
             </li>

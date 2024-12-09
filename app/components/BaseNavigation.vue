@@ -19,8 +19,8 @@ const closeMenu = () => {
         <!-- Botão hamburguer -->
         <button
           class="sm:hidden p-2 text-gray-600"
-          @click="closeMenu"
           aria-label="Toggle menu"
+          @click="closeMenu"
         >
           <Icon name="ri-menu-3-line" style="color: #f79f1a; font-size: 1.5rem" />
         </button>

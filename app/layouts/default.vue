@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <BaseNavigation />
-  <slot />
+    <BaseNavigation />
+    <slot />
 </template>
 
