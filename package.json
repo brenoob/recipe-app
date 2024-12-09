@@ -8,13 +8,13 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix .",
+    "lint:fix": "eslint . --fix",
     "postinstall": "nuxt prepare",
     "prepare": "husky"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.7.2",
-    "@nuxt/icon": "^1.5.6",
+    "@nuxt/icon": "^1.9.1",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
