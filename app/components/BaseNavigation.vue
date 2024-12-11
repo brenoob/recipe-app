@@ -4,6 +4,16 @@ const isMenuOpen = ref(false); // Estado para controlar a abertura do menu
 const closeMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
+
+useSeoMeta({
+  title: 'Receitas - Home', // T tulo da p gina
+  description: 'Explore uma variedade de deliciosas receitas na plataforma Receitas.', // Descri o
+  ogTitle: 'Receitas - Home', // Open Graph Title
+  ogDescription: 'Navegue pelas receitas com ingredientes, tempos de cozimento e avalia es.', // Open Graph Description
+  ogImage: '/favicon.svg', // Imagem para Open Graph (opcional)
+  twitterCard: 'summary_large_image', // Tipo de cart o do Twitter (pode ser 'summary', 'summary_large_image', etc.)
+  twitterImage: '/favicon.svg', // Imagem para o Twitter (opcional)
+});
 </script>
 
 <template>

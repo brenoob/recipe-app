@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import type { Recipe } from '~/types/recipeTypes';
 
+
 const route = useRoute();
 const id = route.params.id as string;
 
 const { data: recipe, error } = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id}`);
 
 const isLoading = ref(true);
+
+const baseUrl = ref<string>(process.env.NODE_ENV === 'production' ? `https://recipesappnuxt.vercel.app${route.path}` : 'http://localhost:3000');
 
 onMounted(() => {
   isLoading.value = false;
@@ -22,6 +25,17 @@ if (error.value) {
     statusMessage: error.value?.statusMessage || 'Failed to fetch recipe',
   });
 }
+useSeoMeta({
+  title: recipe.value?.name || 'Detalhes da Receita',
+  description: `Aprenda como fazer ${recipe.value?.name}. Encontre todos os ingredientes, instru es e dicas!`,
+  ogTitle: recipe.value?.name || 'Detalhes da Receita',
+  twitterTitle: recipe.value?.name || 'Detalhes da Receita',
+  ogUrl: baseUrl.value,
+  ogDescription: `Explore a receita para ${recipe.value?.name}, incluindo dicas de preparo, ingredientes e muito mais.`,
+  ogImage: recipe.value?.image || '/default-image.jpg',
+  twitterCard: 'summary_large_image',
+  twitterImage: recipe.value?.image || '/default-image.jpg',
+});
 </script>
 
 <template>

@@ -1,4 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+  title: "About Us", // T tulo da p gina
+  description: "Learn more about our team and our mission to bring the best digital solutions to our users.", // Descri o
+  ogTitle: "About Us", // Open Graph Title
+  ogDescription: "Learn more about our team and our mission to bring the best digital solutions to our users.", // Open Graph Description
+  ogImage: "/lasanha.jpg", // Imagem para Open Graph (opcional)
+  twitterCard: "summary_large_image", // Tipo de cart o do Twitter
+  twitterImage: "/lasanha.jpg", // Imagem para o Twitter
+});
+</script>
 
 <template>
   <main>
@@ -52,3 +62,4 @@
     </section>
   </main>
 </template>
+

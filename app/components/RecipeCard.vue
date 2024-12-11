@@ -4,6 +4,15 @@ import type { RecipeResponse } from '~/types/recipeTypes';
 const { data, error } = await useFetch<RecipeResponse>(
   "https://dummyjson.com/recipes?limit=12"
 )
+// useSeoMeta({
+//   title: 'Receitas - Explore Todas', // Título da página
+//   description: 'Encontre e explore uma variedade de deliciosas receitas com todos os detalhes que voc  precisa para prepar -las.', // Descrição
+//   ogTitle: 'Receitas - Explore Todas as Receitas', // Open Graph Title
+//   ogDescription: 'Descubra incriveis receitas e inspira o culin ria.', // Open Graph Description
+//   ogImage:  data.value?.recipes[0]?.image || '/favicon.svg', // Imagem para Open Graph (opcional)
+//   twitterCard: 'summary_large_image', // Tipo de cart o do Twitter
+//   twitterImage: data.value?.recipes[0]?.image || '/favicon.svg', // Imagem para o Twitter
+// });
 </script>
 
 <template>
